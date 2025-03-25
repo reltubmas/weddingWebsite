@@ -112,56 +112,6 @@
   <!-- Dynamic Footer Container -->
   <div id="footer-container"></div>
 
-  <!-- JavaScript for Multi-Step Form Workflow -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const formSteps = document.querySelectorAll('.form-step');
-      let currentStep = 0;
-
-      function showStep(step) {
-        formSteps.forEach((fieldset, index) => {
-          fieldset.classList.toggle('active', index === step);
-        });
-      }
-
-      // Next buttons
-      document.getElementById('nextBtn1').addEventListener('click', () => {
-        currentStep = 1;
-        showStep(currentStep);
-      });
-      document.getElementById('nextBtn2').addEventListener('click', () => {
-        currentStep = 2;
-        showStep(currentStep);
-      });
-      document.getElementById('nextBtn3').addEventListener('click', () => {
-        currentStep = 3;
-        showStep(currentStep);
-      });
-      document.getElementById('nextBtn4').addEventListener('click', () => {
-        currentStep = 4;
-        showStep(currentStep);
-      });
-
-      // Previous buttons
-      document.getElementById('prevBtn2').addEventListener('click', () => {
-        currentStep = 0;
-        showStep(currentStep);
-      });
-      document.getElementById('prevBtn3').addEventListener('click', () => {
-        currentStep = 1;
-        showStep(currentStep);
-      });
-      document.getElementById('prevBtn4').addEventListener('click', () => {
-        currentStep = 2;
-        showStep(currentStep);
-      });
-      document.getElementById('prevBtn5').addEventListener('click', () => {
-        currentStep = 3;
-        showStep(currentStep);
-      });
-    });
-  </script>
-  <!-- Script for dynamic footer loading -->
   <script src="script.js"></script>
 
 </body>

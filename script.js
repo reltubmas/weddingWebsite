@@ -93,6 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
       currentStep = 4;
       showStep(currentStep);
     });
+    document.getElementById('nextBtn5').addEventListener('click', () => {
+      currentStep = 5;
+      showStep(currentStep);
+    });
   
     // Previous buttons
     document.getElementById('prevBtn2').addEventListener('click', () => {
@@ -109,6 +113,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     document.getElementById('prevBtn5').addEventListener('click', () => {
       currentStep = 3;
+      showStep(currentStep);
+    });
+    document.getElementById('prevBtn6').addEventListener('click', () => {
+      currentStep = 4;
       showStep(currentStep);
     });
   

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accommodation | The Forsyth Butler Wedding</title>
+  <!-- Google Font: Spectral -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral&display=swap">
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Footer Styles (if separate) -->
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+  <!-- Header / Hero Section -->
+  <header class="hero-header">
+    <h1>Accommodation</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="qanda.html">Q + A</a></li>
+      <li><a href="accommodation.html">Accommodation</a></li>
+      <li><a href="things-to-do.html">Things to do</a></li>
+      <li><a href="rsvp.html">RSVP</a></li>
+    </ul>
+  </nav>
+
+  <!-- Accommodation Listings -->
+  <main class="accommodation-container">
+    <div class="accommodation-intro">
+      <p>The venue is in a rural location so most local hotel options are between 15-25 mins away. We've put together a few options but if you're making a weekend city break out of it, Nottingham city centre has lots more options (approximately 40 mins away).</p>
+    </div>
+
+    <div class="accommodation-item">
+      <h2>The Forest Lodge Hotel</h2>
+      <p>Church St, Edwinstowe, Mansfield NG21 9QA, UK</p>
+      <p>Phone: 01623 824443</p>
+      <p>Cosy hotel in Edwinstowe on the edge of Sherwood Forest (22 min)</p>
+      <a href="#" target="_blank">Website</a>
+    </div>
+
+    <div class="accommodation-item">
+      <h2>The Dukeries Lodge Hotel</h2>
+      <p>High St, Edwinstowe, Mansfield NG21 9HS, UK</p>
+      <p>Phone: 01623 822553</p>
+      <p>Freshly renovated inn and pub (20 min)</p>
+      <a href="#" target="_blank">Website</a>
+    </div>
+
+    <div class="accommodation-item">
+      <h2>Muthu Clumber Park Hotel &amp; Spa</h2>
+      <p>Blyth Rd, Worksop S80 3PA, UK</p>
+      <p>Phone: 01623 867020</p>
+      <p>Spa hotel on the edge of Sherwood Forest (27 mins)</p>
+      <a href="#" target="_blank">Website</a>
+    </div>
+
+    <div class="accommodation-item">
+      <h2>Warner Hotels - Thoresby Hall</h2>
+      <p>THORESBY PARK, Netherfield Ln, Ollerton, Newark NG22 9WH, UK</p>
+      <p>Phone: 0330 135 9580</p>
+      <p>Grade I listed stately house with spa (25 mins)</p>
+      <a href="#" target="_blank">Website</a>
+    </div>
+
+    <div class="accommodation-item">
+      <h2>Manor Court</h2>
+      <p>Main St, Thorpe, Newark NG23 5PX, UK</p>
+      <p>Phone: 01636 525134</p>
+      <p>Adults-only boutique hotel (20 min)</p>
+      <a href="#" target="_blank">Website</a>
+    </div>
+
+    <div class="accommodation-item">
+      <h2>Welbeck Holiday Cottages</h2>
+      <p>Various locations</p>
+      <p>Phone: 01909 500 211</p>
+      <p>A collection of self-catering cottages in the beautiful Welbeck Estate (30 mins)</p>
+      <a href="#" target="_blank">Website</a>
+    </div>
+
+  <div id="footer-container"></div>
+  <script src="script.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDbmlsDsBW4O8CldhVNHbCSDY9z8NtLFtA",
+      authDomain: "forsythbutlerwedding.firebaseapp.com",
+      projectId: "forsythbutlerwedding",
+      storageBucket: "forsythbutlerwedding.firebasestorage.app",
+      messagingSenderId: "951856911332",
+      appId: "1:951856911332:web:8a3f7ab9f5f048bd506df1",
+      measurementId: "G-22YL2V75XV"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</body>
+</html>

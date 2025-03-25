@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | The Forsyth Butler Wedding</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
+<body>
+  <!-- Hero Header -->
+  <header class="hero-header">
+    <h1>Thank You!</h1>
+    <p>Your RSVP has been received.</p>
+  </header>
+  
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="qanda.html">Q + A</a></li>
+      <li><a href="accommodation.html">Accommodation</a></li>
+      <li><a href="things-to-do.html">Things to do</a></li>
+      <li><a href="rsvp.html">RSVP</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Main Content -->
+  <main class="thankyou-container">
+    <section class="thankyou-message">
+      <h2>Thank You for Your RSVP</h2>
+      <p>We appreciate your response and look forward to celebrating with you on November 8, 2025.</p>
+    </section>
+  </main>
+  
+  <!-- Footer Container (dynamically loaded) -->
+  <div id="footer-container"></div>
+  
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+    const firebaseConfig = {
+      apiKey: "AIzaSyDbmlsDsBW4O8CldhVNHbCSDY9z8NtLFtA",
+      authDomain: "forsythbutlerwedding.firebaseapp.com",
+      projectId: "forsythbutlerwedding",
+      storageBucket: "forsythbutlerwedding.firebasestorage.app",
+      messagingSenderId: "951856911332",
+      appId: "1:951856911332:web:8a3f7ab9f5f048bd506df1",
+      measurementId: "G-22YL2V75XV"
+    };
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</body>
+</html>

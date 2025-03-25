@@ -1,0 +1,452 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Spectral', serif;
+    /* Set the background to your floral image */
+    background: url("floral-background.jpg") no-repeat center center;
+    background-size: cover;
+    color: #0a2214;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-family: 'Spectral', serif;
+    font-weight: 300; /* Bolder */
+  }
+  
+  p {
+    font-family: 'Spectral', serif;
+    font-weight: 150; /* Light */
+  }
+  
+  
+  
+  /* Hero / Header Section */
+  .hero-header {
+    margin-top: 30vh;
+    position: relative;
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+  }
+  
+
+  
+  .hero-title {
+    font-size: 3rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-countdown {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  /* Navigation Bar */
+  .main-nav {
+    background: transparent;
+    border: none;
+    /* Remove any padding or margins if necessary */
+  }
+  
+  .main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-nav li {
+    margin: 0 1rem;
+  }
+  
+  .main-nav a {
+    text-decoration: none;
+    color: #38483F; /* Ensure this color contrasts well with your background */
+    font-size: 1rem;
+  }
+  
+  
+  /* Info Section: Two or Three "Columns" */
+  .info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    padding: 2rem 1rem;
+    gap: 2rem;       /* Spacing between the columns */
+  }
+  
+  .info-box {
+    text-align: center;
+    flex: 1 1 200px; /* Let each box grow/shrink, min 200px wide */
+  }
+  
+  .info-box h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+
+/* Radio label container */
+.radio-group {
+  display: flex;               /* use a flex layout */
+  justify-content: center;     /* center items horizontally */
+  align-items: center;         /* align them nicely on the cross-axis */
+  gap: 1rem;                   /* space between each radio-label */
+  margin-top: 1rem;            /* a little spacing above the radio buttons */
+}
+
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Optional accent-color styling for the radio inputs: */
+.radio-label input[type="radio"] {
+  accent-color: #38483F;  /* or any brand color you like */
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+
+/* Optional: If you need a fallback for older browsers that don’t support accent-color,
+you can override the native appearance completely. Uncomment and adjust as needed:
+
+.radio-label input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid #38483F;
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  background-color: #38483F;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+*/
+
+
+  
+  /* RSVP Button */
+  .rsvp-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #38483F;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  .wedding-day {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Spectral', serif;
+  }
+  
+  .wedding-day h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .wedding-day p {
+    margin: 0.5rem 0;
+  }
+  
+  .wedding-day hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 1rem 0;
+  }
+  
+  .schedule-item p {
+    margin: 0.25rem 0;
+  }
+  
+  .wedding-footer p {
+    font-weight: bold;
+    margin: 0.25rem 0;
+  }
+  
+  
+  /* Order of Service (Optional) */
+  .order-of-service {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgba(255,255,255,0.9);
+    border-radius: 6px;
+  }
+  
+  .order-of-service ul {
+    list-style: none;
+    margin-top: 1rem;
+  }
+  
+  .order-of-service li {
+    margin: 0.5rem 0;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+
+  .qa-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .qa-item {
+    margin: 1rem 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+  }
+  .qa-question {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Spectral', serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  .qa-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  .qa-answer.open {
+    max-height: 500px; /* Adjust this value if necessary */
+    margin-top: 1rem;
+  }
+/* Accommodation Page Styles */
+.accommodation-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Spectral', serif;
+  }
+  
+  .accommodation-intro {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  .accommodation-item {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .accommodation-item h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #38483F;
+  }
+  
+  .accommodation-item p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    color: #38483F;
+  }
+  
+  .accommodation-item a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    color: #38483F;
+    border: 1px solid #38483F;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accommodation-item a:hover {
+    background-color: #38483F;
+    color: #fff;
+  }
+  
+  /* Header / Hero Section for Accommodation Page */
+
+  
+  .hero-header h1 {
+    margin: 0;
+    font-size: 3rem;
+  }
+  
+  /* Navigation Styles */
+  .main-nav {
+    background: transparent;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 1rem;
+  }
+  
+  .main-nav a {
+    text-decoration: none;
+    color: #38483F;
+    font-size: 1rem;
+  }
+  
+  /* Things To Do Page Styles */
+.things-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Spectral', serif;
+  }
+  
+  .things-intro {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  .things-item {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .things-item h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #38483F;
+  }
+  
+  .things-item p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    color: #38483F;
+  }
+  
+  .things-item a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    color: #38483F;
+    border: 1px solid #38483F;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .things-item a:hover {
+    background-color: #38483F;
+    color: #fff;
+  }
+  
+  .rsvp-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Spectral', serif;
+  }
+  form fieldset {
+    border: none;
+    padding: 1rem 0;
+    display: none;
+  }
+  form fieldset.active {
+    display: block;
+  }
+  form legend {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  form p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .form-navigation {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .form-navigation button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    background-color: #38483F;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .form-navigation button:hover {
+    background-color: #2a3b33;
+  }
+  

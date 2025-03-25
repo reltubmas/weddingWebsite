@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Q &amp; A | The Forsyth Butler Wedding</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral&display=swap">
+  <link rel="stylesheet" href="footer.css">
+
+</head>
+<body>
+    <!-- Optional Hero Header for the Q&A Page -->
+    <header class="hero-header">
+      <h1>Q &amp; A</h1>
+    </header>
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="qanda.html">Q + A</a></li>
+          <li><a href="accommodation.html">Accommodation</a></li>
+          <li><a href="things-to-do.html">Things to do</a></li>
+          <li><a href="rsvp.html">RSVP</a></li>
+        </ul>
+      </nav>
+    
+    <div class="qa-container">
+      <div class="qa-item">
+        <button class="qa-question">What time should I arrive?</button>
+        <div class="qa-answer">
+          <p>The ceremony starts at 1.30pm and although we are pathologically late people, legend has it you have to start these things on time. The ushers will aim to have everyone seated shortly after 1pm for the ceremony to begin promptly (hypothetically) at 1.30pm.</p>
+        </div>
+      </div>
+      
+      <div class="qa-item">
+        <button class="qa-question">What's the Dress Code?</button>
+        <div class="qa-answer">
+          <p>Please wear whatever makes you feel at your best! If it helps you decide, the Wedding Party will be dressed in Formal attire. If we get lucky with the weather there may be some quick pictures taken outdoors, but for the most part we will be cosy inside with the fires lit.</p>
+        </div>
+      </div>
+      
+      <div class="qa-item">
+        <button class="qa-question">How do I make my Food choices?</button>
+        <div class="qa-answer">
+          <p>Never fear, you will not starve. We'll be finalising the menu closer to the time and will capture food choices once we know more about dietary requirements.</p>
+        </div>
+      </div>
+      
+      <div class="qa-item">
+        <button class="qa-question">What if I have an allergy?</button>
+        <div class="qa-answer">
+          <p>We'll make sure the venue is able to accommodate your dietary requirements - please let us know as part of your RSVP.</p>
+        </div>
+      </div>
+      
+      <div class="qa-item">
+        <button class="qa-question">Does my Invite have a +1?</button>
+        <div class="qa-answer">
+          <p>For the daytime, we're having a small intimate wedding so we're only inviting the people addressed on the invites. Then, we'd love to welcome any +1s (or +2s... or +3s) to the evening celebration to dance the night away! We'll collect their details during the RSVP process.</p>
+        </div>
+      </div>
+      
+      <div class="qa-item">
+        <button class="qa-question">Can I take photos during the ceremony?</button>
+        <div class="qa-answer">
+          <p>No thank yoooooou. Please enjoy the ceremony with your eyeballs instead - the ushers (and the extremely assertive ring bearer) will be ensuring we have an unplugged ceremony! After that, feel free to go wild.</p>
+        </div>
+      </div>
+      
+      <div class="qa-item">
+        <button class="qa-question">Are we at the same venue all day?</button>
+        <div class="qa-answer">
+          <p>Yes - we'll be in main house for the ceremony and drinks reception, and move to the adjoining Coach House for the wedding breakfast and evening festivities.</p>
+        </div>
+      </div>
+      
+      <div class="qa-item">
+        <button class="qa-question">Does the venue offer accomodation?</button>
+        <div class="qa-answer">
+          <p>The house does have a small number of bedrooms, but unfortunately only enough for our Wedding Party and immediate family. We've put together lots of local options on the Accommodation page to help people choose.</p>
+        </div>
+      </div>
+      
+      <div class="qa-item">
+        <button class="qa-question">Does the venue have parking?</button>
+        <div class="qa-answer">
+          <p>Yes! There is ample parking on site.</p>
+        </div>
+      </div>
+      
+      <div class="qa-item">
+        <button class="qa-question">Are you having a gift registry?</button>
+        <div class="qa-answer">
+          <p>Good question. More thought needed. As two Thirty-Somethings who have been living in sin for a while now, we have already set up our home together! The best gift is that all our favourite people are going to be together, but we'll give this more thought as we know people may like to wish us well!</p>
+        </div>
+      </div>
+      
+      <div class="qa-item">
+        <button class="qa-question">How will April cope with people looking at her?</button>
+        <div class="qa-answer">
+          <p>Another great question and a big unknown. Current thinking is she bolts down the aisle and anything after that is a bonus.</p>
+        </div>
+      </div>
+    </div>
+    <div id="footer-container"></div>
+
+    <script src="script.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDbmlsDsBW4O8CldhVNHbCSDY9z8NtLFtA",
+          authDomain: "forsythbutlerwedding.firebaseapp.com",
+          projectId: "forsythbutlerwedding",
+          storageBucket: "forsythbutlerwedding.firebasestorage.app",
+          messagingSenderId: "951856911332",
+          appId: "1:951856911332:web:8a3f7ab9f5f048bd506df1",
+          measurementId: "G-22YL2V75XV"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+</body>
+</html>

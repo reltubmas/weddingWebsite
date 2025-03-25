@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP | The Forsyth Butler Wedding</title>
+  <!-- Google Font: Spectral -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral&display=swap">
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Footer Styles if separate -->
+  <link rel="stylesheet" href="footer.css">
+  
+</head>
+<body>
+  <!-- Header / Hero Section -->
+  <header class="hero-header">
+    <h1>RSVP</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="qanda.html">Q + A</a></li>
+      <li><a href="accommodation.html">Accommodation</a></li>
+      <li><a href="things-to-do.html">Things to do</a></li>
+      <li><a href="rsvp.html">RSVP</a></li>
+    </ul>
+  </nav>
+
+  <!-- RSVP Multi-Step Form -->
+  <main class="rsvp-container">
+    <form id="rsvpForm" action="https://formspree.io/f/xwplqpgz" method="POST">
+      <!-- Step 1: Name -->
+      <fieldset class="form-step active">
+        <legend>Step 1: Your Name</legend>
+        <label for="name">Name:</label>
+        <input type="hidden" name="_subject" value="New RSVP Received!">
+        <input type="text" id="name" name="name" required>
+        <div class="form-navigation">
+          <button type="button" id="nextBtn1">Next</button>
+        </div>
+      </fieldset>
+      
+      <!-- Step 2: Email -->
+      <fieldset class="form-step">
+        <legend>Step 2: Your Email</legend>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <div class="form-navigation">
+          <button type="button" id="prevBtn2">Previous</button>
+          <button type="button" id="nextBtn2">Next</button>
+        </div>
+      </fieldset>
+
+  <!-- Step 3: Will you be attending? -->
+    <fieldset class="form-step">
+      <legend>Step 3: Will you be attending?</legend>
+      <p>Please select your response:</p>
+      
+      <div class="radio-group">
+        <label class="radio-label">
+          <input type="radio" name="attendance" value="Yes" required> Yes
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="attendance" value="No" required> No
+        </label>
+      </div>
+    
+      <div class="form-navigation">
+        <button type="button" id="prevBtn3">Previous</button>
+        <button type="button" id="nextBtn3">Next</button>
+      </div>
+    </fieldset>
+      
+      <!-- Step 4: Dietaries -->
+      <fieldset class="form-step">
+        <legend>Step 4: Dietary Requirements</legend>
+        <label for="dietaries">Dietaries:</label>
+        <input type="text" id="dietaries" name="dietaries">
+        <div class="form-navigation">
+          <button type="button" id="prevBtn4">Previous</button>
+          <button type="button" id="nextBtn4">Next</button>
+        </div>
+      </fieldset>
+      
+      <!-- Step 5: +1s -->
+      <fieldset class="form-step">
+        <legend>Step 5: +1 Information</legend>
+        <label for="plusOne">Any +1s in the evening?</label>
+        <input type="text" id="plusOne" name="plusOne">
+        <div class="form-navigation">
+          <button type="button" id="prevBtn5">Previous</button>
+          <button type="button" id="nextBtn5">Next</button>
+        </div>
+      </fieldset>
+      
+      <!-- Step 6: Note to the Couple -->
+      <fieldset class="form-step">
+        <legend>Step 5: Note to the Couple</legend>
+        <label for="note">Send a note to the couple:</label>
+        <textarea id="note" name="note"></textarea>
+        <div class="form-navigation">
+          <button type="button" id="prevBtn6">Previous</button>
+          <button type="submit">Submit</button>
+        </div>
+      </fieldset>
+    </form>
+  </main>
+
+  <!-- Dynamic Footer Container -->
+  <div id="footer-container"></div>
+
+  <!-- JavaScript for Multi-Step Form Workflow -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const formSteps = document.querySelectorAll('.form-step');
+      let currentStep = 0;
+
+      function showStep(step) {
+        formSteps.forEach((fieldset, index) => {
+          fieldset.classList.toggle('active', index === step);
+        });
+      }
+
+      // Next buttons
+      document.getElementById('nextBtn1').addEventListener('click', () => {
+        currentStep = 1;
+        showStep(currentStep);
+      });
+      document.getElementById('nextBtn2').addEventListener('click', () => {
+        currentStep = 2;
+        showStep(currentStep);
+      });
+      document.getElementById('nextBtn3').addEventListener('click', () => {
+        currentStep = 3;
+        showStep(currentStep);
+      });
+      document.getElementById('nextBtn4').addEventListener('click', () => {
+        currentStep = 4;
+        showStep(currentStep);
+      });
+
+      // Previous buttons
+      document.getElementById('prevBtn2').addEventListener('click', () => {
+        currentStep = 0;
+        showStep(currentStep);
+      });
+      document.getElementById('prevBtn3').addEventListener('click', () => {
+        currentStep = 1;
+        showStep(currentStep);
+      });
+      document.getElementById('prevBtn4').addEventListener('click', () => {
+        currentStep = 2;
+        showStep(currentStep);
+      });
+      document.getElementById('prevBtn5').addEventListener('click', () => {
+        currentStep = 3;
+        showStep(currentStep);
+      });
+    });
+  </script>
+  <!-- Script for dynamic footer loading -->
+  <script src="script.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDbmlsDsBW4O8CldhVNHbCSDY9z8NtLFtA",
+      authDomain: "forsythbutlerwedding.firebaseapp.com",
+      projectId: "forsythbutlerwedding",
+      storageBucket: "forsythbutlerwedding.firebasestorage.app",
+      messagingSenderId: "951856911332",
+      appId: "1:951856911332:web:8a3f7ab9f5f048bd506df1",
+      measurementId: "G-22YL2V75XV"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</body>
+</html>

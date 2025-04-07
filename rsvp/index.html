@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral&display=swap">
   <link rel="stylesheet" href="/footer.css">
-
-  
 </head>
 <body>
   <!-- Header / Hero Section -->
@@ -16,9 +14,11 @@
     <h1>RSVP</h1>
   </header>
 
-  <!-- Navigation Bar -->
   <nav class="main-nav">
-    <ul>
+    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+      <!-- Include the close button inside the overlay for mobile -->
+      <li class="close-nav"><button type="button" aria-label="Close menu">&times;</button></li>
       <li><a href="/index.html">Home</a></li>
       <li><a href="/FAQs/">FAQs</a></li>
       <li><a href="/accommodation-info/">Accommodation</a></li>
@@ -26,6 +26,8 @@
       <li><a href="/rsvp/">RSVP</a></li>
     </ul>
   </nav>
+  
+
 
   <!-- RSVP Multi-Step Form -->
   <main class="rsvp-container">
@@ -37,7 +39,7 @@
         <input type="hidden" name="_subject" value="New RSVP Received!">
         <input type="text" id="name" name="name" required>
         <div class="form-navigation">
-          <button type="button" id="nextBtn1">Next</button>
+          <button type="button" class="next-btn" data-next-step="2">Next</button>
         </div>
       </fieldset>
       
@@ -47,60 +49,58 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <div class="form-navigation">
-          <button type="button" id="prevBtn2">Previous</button>
-          <button type="button" id="nextBtn2">Next</button>
+          <button type="button" class="prev-btn" data-prev-step="1">Previous</button>
+          <button type="button" class="next-btn" data-next-step="3">Next</button>
         </div>
       </fieldset>
-
-  <!-- Step 3: Will you be attending? -->
-    <fieldset class="form-step">
-      <legend>Step 3: Will you be attending?</legend>
-      <p>Please select your response:</p>
       
-      <div class="radio-group">
-        <label class="radio-label">
-          <input type="radio" name="attendance" value="Yes" required> Yes
-        </label>
-        <label class="radio-label">
-          <input type="radio" name="attendance" value="No" required> No
-        </label>
-      </div>
-    
-      <div class="form-navigation">
-        <button type="button" id="prevBtn3">Previous</button>
-        <button type="button" id="nextBtn3">Next</button>
-      </div>
-    </fieldset>
+      <!-- Step 3: Will you be attending? -->
+      <fieldset class="form-step">
+        <legend>Step 3: Will you be attending?</legend>
+        <p>Please select your response:</p>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="attendance" value="Yes" required> Yes
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="attendance" value="No" required> No
+          </label>
+        </div>
+        <div class="form-navigation">
+          <button type="button" class="prev-btn" data-prev-step="2">Previous</button>
+          <button type="button" class="next-btn" data-next-step="4">Next</button>
+        </div>
+      </fieldset>
       
-      <!-- Step 4: Dietaries -->
+      <!-- Step 4: Dietary Requirements -->
       <fieldset class="form-step">
         <legend>Step 4: Dietary Requirements</legend>
         <label for="dietaries">Dietaries:</label>
         <input type="text" id="dietaries" name="dietaries">
         <div class="form-navigation">
-          <button type="button" id="prevBtn4">Previous</button>
-          <button type="button" id="nextBtn4">Next</button>
+          <button type="button" class="prev-btn" data-prev-step="3">Previous</button>
+          <button type="button" class="next-btn" data-next-step="5">Next</button>
         </div>
       </fieldset>
       
-      <!-- Step 5: +1s -->
+      <!-- Step 5: +1 Information -->
       <fieldset class="form-step">
         <legend>Step 5: +1 Information</legend>
         <label for="plusOne">Any +1s in the evening?</label>
         <input type="text" id="plusOne" name="plusOne">
         <div class="form-navigation">
-          <button type="button" id="prevBtn5">Previous</button>
-          <button type="button" id="nextBtn5">Next</button>
+          <button type="button" class="prev-btn" data-prev-step="4">Previous</button>
+          <button type="button" class="next-btn" data-next-step="6">Next</button>
         </div>
       </fieldset>
       
       <!-- Step 6: Note to the Couple -->
       <fieldset class="form-step">
-        <legend>Step 5: Note to the Couple</legend>
+        <legend>Step 6: Note to the Couple</legend>
         <label for="note">Send a note to the couple:</label>
         <textarea id="note" name="note"></textarea>
         <div class="form-navigation">
-          <button type="button" id="prevBtn6">Previous</button>
+          <button type="button" class="prev-btn" data-prev-step="5">Previous</button>
           <button type="submit">Submit</button>
         </div>
       </fieldset>

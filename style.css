@@ -429,15 +429,7 @@ form textarea {
 
 /* Mobile-only Bottom Navigation */
 
-/* Show Bottom Navigation on Mobile and Hide Desktop Nav */
-@media (max-width: 768px) {
-  .main-nav {
-    display: none;
-  }
-  .bottom-nav {
-    display: block;
-  }
-}
+
 
 /* Bottom Navigation Bar Styling */
 .bottom-nav {
@@ -471,4 +463,12 @@ form textarea {
   font-size: 0.9rem;
 }
 
-
+/* Show Bottom Navigation on Mobile and Hide Desktop Nav */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+  .bottom-nav {
+    display: block;
+  }
+}

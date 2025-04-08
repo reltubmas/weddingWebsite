@@ -49,7 +49,7 @@ p {
   margin-top: 1rem;
 }
 
-/* Navigation Bar */
+/* Navigation Bar (Desktop Only) */
 .main-nav {
   background: transparent;
   text-align: center;
@@ -72,77 +72,6 @@ p {
   color: #38483F;
   font-size: 1rem;
 }
-
-/* Hamburger styles */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #38483F;
-  margin: 1rem;
-}
-
-/* Focus styling for accessibility */
-.hamburger:focus {
-  outline: 2px solid #38483F;
-}
-
-/* Default nav links */
-.nav-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  list-style: none;
-}
-
-/* Mobile styles for Navigation */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1000;
-  }
-  .nav-links {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 900;
-    padding: 2rem 1rem;
-  }
-  .nav-links.open {
-    display: flex;
-  }
-  /* Hide the close button on larger screens */
-  .close-nav {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-  }
-  .close-nav button {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #38483F;
-    cursor: pointer;
-  }
-  /* Optional: Remove default spacing between nav items */
-  .main-nav ul li {
-    margin: 0.5rem 0;
-  }
-}
-
 
 /* Info Section */
 .info-section {
@@ -498,4 +427,48 @@ form textarea {
   }
 }
 
-/* Footer Styles (loaded via footer.css, so no changes here) */
+/* Mobile-only Bottom Navigation */
+
+/* Show Bottom Navigation on Mobile and Hide Desktop Nav */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+  .bottom-nav {
+    display: block;
+  }
+}
+
+/* Bottom Navigation Bar Styling */
+.bottom-nav {
+  display: none; /* Hidden on desktop */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.bottom-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5em 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-nav li {
+  flex: 1;
+  text-align: center;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #38483F;
+  font-size: 0.9rem;
+}
+
+

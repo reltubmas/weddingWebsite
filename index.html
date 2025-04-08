@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral&display=swap">
   <link rel="stylesheet" href="/footer.css">
-
 </head>
 <body>
   <!-- Header / Hero Section -->
@@ -19,11 +18,9 @@
     </p>
   </header>
 
+  <!-- Updated Desktop Navigation (Hamburger and close button removed) -->
   <nav class="main-nav">
-    <button class="hamburger" aria-label="Toggle menu">&#9776;</button>
     <ul class="nav-links">
-      <!-- Include the close button inside the overlay for mobile -->
-      <li class="close-nav"><button type="button" aria-label="Close menu">&times;</button></li>
       <li><a href="/index.html">Home</a></li>
       <li><a href="/FAQs/">FAQs</a></li>
       <li><a href="/accommodation-info/">Accommodation</a></li>
@@ -31,8 +28,6 @@
       <li><a href="/rsvp/">RSVP</a></li>
     </ul>
   </nav>
-  
-
 
   <!-- Main Content -->
   <main class="info-section">
@@ -70,8 +65,18 @@
     <hr>
   </section>
 
+  <!-- NEW Mobile Bottom Navigation (will be visible only on mobile via CSS) -->
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/FAQs/">FAQs</a></li>
+      <li><a href="/accommodation-info/">Accommodation</a></li>
+      <li><a href="/things-to-do/">Things to do</a></li>
+      <li><a href="/rsvp/">RSVP</a></li>
+    </ul>
+  </nav>
+
   <div id="footer-container"></div>
   <script src="/script.js"></script>
-
 </body>
 </html>

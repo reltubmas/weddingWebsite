@@ -29,30 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-/* Hamburger Menu Setup with ARIA Enhancements */
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-if (hamburger && navLinks) {
-  // Ensure the nav overlay is closed on load
-  navLinks.classList.remove('open');
-  hamburger.setAttribute('aria-expanded', 'false');
-  
-  hamburger.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', isOpen.toString());
-  });
-
-  // Add listener for the close button inside the nav overlay, if present
-  const closeBtn = navLinks.querySelector('.close-nav button');
-  if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-    });
-  }
-}
-
-
   /* RSVP Form Multi-Step Setup with Validation */
   const formSteps = document.querySelectorAll('.form-step');
   let currentStep = 0;
@@ -113,14 +89,6 @@ if (hamburger && navLinks) {
 
   // Initially display the first step
   showStep(currentStep);
-
-  /* Resize Listener to Reset Hamburger Menu on Larger Screens */
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 768 && navLinks.classList.contains('open')) {
-      navLinks.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-    }
-  });
 
   /* Footer Loading with Fallback */
   fetch('/footer.html')

@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Spectral', serif;
-  background: url("floral-background.jpg") no-repeat center center;
+  background: url("floral-background.jpg") no-repeat center top fixed;
   background-size: cover;
   color: #0a2214;
   min-height: 100vh;
@@ -201,6 +201,8 @@ p {
   margin: 1rem 0;
   border-bottom: 1px solid #ccc;
   padding-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
 }
 
 .qa-question {
@@ -234,8 +236,9 @@ p {
 .things-container {
   max-width: 800px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 1rem;
   font-family: 'Spectral', serif;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .accommodation-intro,
@@ -252,6 +255,7 @@ p {
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .accommodation-item h2,

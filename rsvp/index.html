@@ -31,7 +31,7 @@
       <!-- Step 1: Name -->
       <fieldset class="form-step active">
         <legend>Step 1: Your Name</legend>
-        <label for="name">Name:</label>
+        <label for="name">Name on invitation:</label>
         <input type="hidden" name="_subject" value="New RSVP Received!">
         <input type="text" id="name" name="name" required>
         <div class="form-navigation">
@@ -52,7 +52,7 @@
       
       <!-- Step 3: Attendance -->
       <fieldset class="form-step">
-        <legend>Step 3: Will you be attending?</legend>
+        <legend>Step 3: Can you join us?</legend>
         <p>Please select your response:</p>
         <div class="radio-group">
           <label class="radio-label">
@@ -70,8 +70,8 @@
       
       <!-- Step 4: Dietary Requirements -->
       <fieldset class="form-step">
-        <legend>Step 4: Dietary Requirements</legend>
-        <label for="dietaries">Dietaries:</label>
+        <legend>Step 4: Any Dietary Requirements?</legend>
+        <label for="dietaries">Please let us know:</label>
         <input type="text" id="dietaries" name="dietaries">
         <div class="form-navigation">
           <button type="button" class="prev-btn" data-prev-step="3">Previous</button>
@@ -83,7 +83,7 @@
       <fieldset class="form-step">
         <legend>Step 5: +1 Information</legend>
         <label for="plusOne">Any +1s in the evening?</label>
-        <input type="text" id="plusOne" name="plusOne">
+        <input type="text" id="plusOne" name="plusOne" placeholder="If yes, how many and any dietary requirements?">
         <div class="form-navigation">
           <button type="button" class="prev-btn" data-prev-step="4">Previous</button>
           <button type="button" class="next-btn" data-next-step="6">Next</button>
@@ -93,7 +93,7 @@
       <!-- Step 6: Note to the Couple -->
       <fieldset class="form-step">
         <legend>Step 6: Note to the Couple</legend>
-        <label for="note">Send a note to the couple:</label>
+        <label for="note">Send an optional note:</label>
         <textarea id="note" name="note"></textarea>
         <div class="form-navigation">
           <button type="button" class="prev-btn" data-prev-step="5">Previous</button>
@@ -108,7 +108,7 @@
     <ul>
       <li><a href="/index.html">Home</a></li>
       <li><a href="/FAQs/">FAQs</a></li>
-      <li><a href="/accommodation-info/">Accommodation</a></li>
+      <li><a href="/accommodation-info/">Hotels</a></li>
       <li><a href="/things-to-do/">Things to do</a></li>
       <li><a href="/rsvp/">RSVP</a></li>
     </ul>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accommodation | The Forsyth Butler Wedding</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral&display=swap">
+  <link rel="stylesheet" href="/footer.css">
+</head>
+<body>
+  <!-- Header / Hero Section -->
+  <header class="hero-header">
+    <h1 class="hero-title">APRIL &amp; SAM</h1>
+    <p class="hero-subtitle">Would be honoured if you would join us to celebrate our wedding:</p>
+    <p class="hero-subtitle">The evening of: November 8, 2025 | Southwell, UK</p>
+    <p class="hero-countdown">
+      <span id="daysRemaining"></span> DAYS TO GO!
+    </p>
+  </header>
+
+  <<!-- Wedding Day Schedule Section -->
+  <section class="wedding-day">
+    <div class="wedding-overview">
+      <h3>Wedding Day</h3>
+      <p>November 8, 2025</p>
+      <p>1:30 PM–12:00 AM</p>
+      <p>
+        Norwood Park<br>
+        Halam Road, England, NG25 0PF, United Kingdom
+      </p>
+    </div>
+    <hr>
+    <div class="schedule-item">
+      <p><strong>1:30 PM–2:00 PM</strong></p>
+      <p>Ceremony</p>
+    </div>
+    <hr>
+    <div class="schedule-item">
+      <p><strong>2:00 PM–6:45 PM</strong></p>
+      <p>Reception</p>
+    </div>
+    <hr>
+    <div class="schedule-item">
+      <p><strong>6:45 PM–12:00 AM</strong></p>
+      <p>Evening Shindig</p>
+    </div>
+    <hr>
+  </section>
+
+  <!-- Evening Invitation Form -->
+  <main class="rsvp-container">
+    <form id="eveningForm" action="https://formspree.io/f/xwplqpgz" method="POST">
+      <input type="hidden" name="_subject" value="New Evening RSVP Received!">
+      <!-- Step 1: Name -->
+      <fieldset class="form-step active">
+        <legend>Step 1: Your Name</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <div class="form-navigation">
+          <button type="button" class="next-btn" data-next-step="2">Next</button>
+        </div>
+      </fieldset>
+
+      <!-- Step 2: Attendance -->
+      <fieldset class="form-step">
+        <legend>Step 2: Evening Attendance</legend>
+        <p>Will you be joining us for the Evening Shindig?</p>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="attendance" value="Yes" required> Yes
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="attendance" value="No" required> No
+          </label>
+        </div>
+        <div class="form-navigation">
+          <button type="button" class="prev-btn" data-prev-step="1">Previous</button>
+          <button type="button" class="next-btn" data-next-step="3">Next</button>
+        </div>
+      </fieldset>
+
+      <!-- Step 3: +1 Information -->
+      <fieldset class="form-step">
+        <legend>Step 3: +1 Information</legend>
+        <label for="plusOne">Please provide the name(s) of your +1(s):</label>
+        <input type="text" id="plusOne" name="plusOne">
+        <div class="form-navigation">
+          <button type="button" class="prev-btn" data-prev-step="2">Previous</button>
+          <button type="button" class="next-btn" data-next-step="4">Next</button>
+        </div>
+      </fieldset>
+
+      <!-- Step 4: Note -->
+      <fieldset class="form-step">
+        <legend>Step 4: A Note to the Couple</legend>
+        <label for="note">Send a note to the couple:</label>
+        <textarea id="note" name="note"></textarea>
+        <div class="form-navigation">
+          <button type="button" class="prev-btn" data-prev-step="3">Previous</button>
+          <button type="submit">Submit</button>
+        </div>
+      </fieldset>
+    </form>
+  </main>
+
+ <!-- NEW Mobile Bottom Navigation (will be visible only on mobile via CSS) -->
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/FAQs/">FAQs</a></li>
+      <li><a href="/accommodation-info/">Hotels</a></li>
+      <li><a href="/things-to-do/">Things to do</a></li>
+      <li><a href="/rsvp/">RSVP</a></li>
+    </ul>
+  </nav>
+
+  <div id="footer-container"></div>
+  <script src="/script.js"></script>
+</body>
+</html>
+

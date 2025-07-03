@@ -234,11 +234,13 @@ p {
 /* Accommodation & Things To Do Items */
 .accommodation-container,
 .things-container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  font-family: 'Spectral', serif;
-  background: rgba(255, 255, 255, 0.9);
+max-width: 600px;
+margin: 2rem auto;
+padding: 1rem;
+background: rgba(255, 255, 255, 0.9);
+border-radius: 8px;
+text-align: center;
+font-family: 'Spectral', serif;
 }
 
 .accommodation-intro,
